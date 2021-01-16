@@ -1,0 +1,83 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-me {
+    padding: 0 80px;
+
+    @include media($xl) {
+        padding: 0 16px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: $content-width;
+        margin: 0 auto;
+
+        @include media($md) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__name {
+        color: $black;
+    }
+
+    &__description {
+        color: $light-grey;
+    }
+    
+    &__socials {
+        display: flex;
+        margin-top: 3rem;
+
+        @include media ($md) {
+            justify-content: center;
+        }
+
+        a {
+            margin-right: 2.5rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        i {
+            color: $dark-grey;
+            transition: .2s linear color;
+
+            &:hover {
+                transition: .3s linear color;
+                color: darken($dark-grey, 10%);
+            }
+        }
+
+    }
+
+    &__photo {
+        @include media ($lg) {
+            width: 320px;   
+        }
+
+        @include media ($sm) {
+            width: 270px;
+        }
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: .5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: .8rem;
+    color: $light-grey;
+    text-align: center;
+}

@@ -1,0 +1,37 @@
+@mixin textResponsive($fsXL, $fsLG, $fsSM) {
+    @include media ($xl) {
+        font-size: $fsXL; 
+    }
+
+    @include media ($lg) {
+        font-size: $fsLG;
+    }
+
+    @include media ($sm) {
+        font-size: $fsSM;
+    }  
+}
+
+h1 {
+    font-size: 7.8rem;
+    font-weight: 700;
+    line-height: 1.6;
+    @include textResponsive(6rem, 4rem, 3.5rem)
+
+}
+
+p {
+     font-size: 1.5rem;
+     font-weight: 600;
+     @include textResponsive(1.2rem, 1rem, .9rem) 
+}
+
+h1, p {
+    @include media ($md) {
+        text-align: center;
+    }
+}
+
+i {
+    font-size: 1.8rem;
+}
