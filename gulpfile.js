@@ -39,7 +39,7 @@ const distHTML = () => {
 }
 
 const distImages = () => {
-    return gulp.src(`${srcPath}/images/*.{png,gif,jpg}`)
+    return gulp.src(`${srcPath}/images/*.{png,gif,jpg,webp}`)
     .pipe(gulp.dest(`${distPath}/images`)); 
 }
 
