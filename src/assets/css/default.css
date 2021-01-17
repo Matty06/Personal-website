@@ -73,6 +73,7 @@ body {
   justify-content: center; }
 
 .about-me {
+  margin-top: 5rem;
   padding: 0 80px; }
   @media all and (max-width: 1175px) {
     .about-me {
