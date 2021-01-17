@@ -1,13 +1,10 @@
-body {
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .about-me {
     margin-top: 5rem;
     padding: 0 80px;
+
+    @include media($md) {
+        margin-top: 1.5rem;
+    }
 
     @include media($xl) {
         padding: 0 16px;
